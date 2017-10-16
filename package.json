@@ -1,0 +1,35 @@
+{
+  "name": "keyword-crawler",
+  "version": "1.0.0",
+  "repository": "git@github.com:rodrigogs/keyword-crawler.git",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Rodrigo Gomes da Silva",
+    "email": "rodrigo.smscom@gmail.com",
+    "url": "https://github.com/rodrigogs"
+  },
+  "scripts": {
+    "start": "dotenv node index.js",
+    "eslint": "eslint . --ext .js",
+    "test": "cross-env NODE_ENV=test mocha --ui tdd $(find test -name '*.spec.js')",
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=html --reporter=lcov npm test"
+  },
+  "dependencies": {
+    "mongoose": "^4.12.2",
+    "simplecrawler": "^1.1.6"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^5.0.5",
+    "dotenv-cli": "^1.4.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  }
+}
